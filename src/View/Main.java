@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         ArrayList<String> pupil = new ArrayList<>();
-        Scanner in = new Scanner(System.in);
+
         System.out.println("Enter pupil name");
         String pupilName=EnterValues.enterString();
 
