@@ -1,4 +1,4 @@
-package Model;
+package Model.Misc;
 
 public class Filepath {
     private static String namePath = "\\src\\Db\\name.txt";

@@ -1,10 +1,10 @@
-package Model;
+package Controller;
 
 import java.io.*;
 import java.util.List;
 import java.util.Scanner;
 
-public class EnterValues {
+public class InputController {
 
     public static String enterString()
     {
@@ -14,7 +14,7 @@ public class EnterValues {
         {
             System.out.println("You entered wrong String (Your String is = "+variable+")");
             System.out.println("\nPlease, enter the correct String (not empty/null) :");
-            EnterValues.enterString();
+            InputController.enterString();
 
         }return variable;
 

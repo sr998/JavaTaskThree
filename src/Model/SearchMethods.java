@@ -1,5 +1,7 @@
 package Model;
 
+import Model.Misc.Filepath;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -13,10 +15,11 @@ public class SearchMethods {
 
         for (int i = 0; i < tempMark.size(); i++) {
             if (Integer.parseInt(tempMark.get(i)) >= 4) {
-                ListToArray.printById(i);
+                PrintData.printById(i);
             }
 
         }
+        System.out.println("\n\n");
 
     }
 
@@ -28,7 +31,7 @@ public class SearchMethods {
 
         for (int i = 0; i < tempMark.size(); i++) {
             if (Integer.parseInt(tempMark.get(i)) >= 4 && !tempCountry.get(i).equals("Ukraine")) {
-                ListToArray.printById(i);
+                PrintData.printById(i);
             }
         }
         System.out.println("\n\n\n\n");

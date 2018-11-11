@@ -1,6 +1,8 @@
-package Model;
+package Controller;
 
-import java.io.File;
+import Model.*;
+import Model.Misc.Filepath;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,9 +12,9 @@ public class Dialog {
 
     public static void altoTxt(String filePath, List<String> list) throws IOException {
         list = FileReader.readFromTxt(filePath);
-        String nameStr = EnterValues.enterString();
-        AddToDb.addString(list,nameStr);
-        EnterValues.addToTxt(list,filePath);
+        String nameStr = InputController.enterString();
+        list.add(nameStr);
+        InputController.addToTxt(list,filePath);
     }
 
     public static void addStudent() throws IOException {
@@ -48,6 +50,7 @@ public class Dialog {
         ArrayList<String> marks = new ArrayList<>();
         System.out.println("Input Student's average mark :");
         altoTxt(Filepath.getAvgmarkPath(),marks);
+        System.out.println("\n\n");
     }
 
     public static void Menu() throws IOException {
@@ -63,7 +66,8 @@ public class Dialog {
 
             switch (option){
                 case "add":{Dialog.addStudent(); break;}
-                case "printall":{ListToArray.printAll(); break;}
+                case "printall":{
+                    PrintData.printAll(); break;}
                 case "searchmarks":{SearchMethods.getBestByMark(); break;}
                 case "searchforeign":{SearchMethods.foreignersWithGoodMarks(); break;}
                 case "exit":{System.exit(0);}

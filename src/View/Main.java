@@ -1,12 +1,9 @@
 package View;
 
-import Model.*;
+import Controller.Dialog;
 
 
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -14,7 +11,7 @@ public class Main {
 
 
         //Dialog.addStudent();
-        //ListToArray.printAll();
+        //PrintData.printAll();
        // SearchMethods.getBestByMark();
         //SearchMethods.foreignersWithGoodMarks();
         Dialog.Menu();
